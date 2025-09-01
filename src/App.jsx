@@ -105,7 +105,7 @@ export default function App() {
     keysAll.forEach((k) => {
       const file = KEY_TO_FILE[k]
       if (!file) return
-      const url = `/sounds/${file}`
+      const url = `${import.meta.env.BASE_URL}sounds/${file}`
       poolsRef.current.set(k, new AudioPool(url, 6))
     })
     return () => { poolsRef.current.clear() }
