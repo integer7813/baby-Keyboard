@@ -20,6 +20,7 @@ import { useEmojiSplash } from './use/useEmojiSplash';
 
 import { Home, Privacy, Terms, HowTo } from './pages';
 import EmojiSplash from './components/EmojiSplash';
+import ShareMenu from './components/ShareMenu'
 
 export default function App() {
   const { pathname } = useLocation();
@@ -216,6 +217,10 @@ function Layout({ isHome, showSecondRow, setShowSecondRow, splashItems }) {
               <Link component={RouterLink} to="/privacy" underline="hover">Privacy Policy</Link>
               <Link component={RouterLink} to="/terms" underline="hover">Terms of Service</Link>
               <Link component={RouterLink} to="/how-to" underline="hover">How to Use</Link>
+
+              {/* 공유하기 버튼 */}
+              <ShareMenu useIconButton />
+
             </Stack>
           </Stack>
         </Container>
