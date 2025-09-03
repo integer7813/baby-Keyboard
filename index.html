@@ -1,23 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
 
-    <!-- ✅ 소유권 확인용 메타 태그 -->
+    <!-- ✅ AdSense 소유권/계정 메타 -->
     <meta name="google-adsense-account" content="ca-pub-4444316763086306" />
 
-    <!-- Emoji favicon (파일 추가 없이 바로 사용) -->
+    <!-- 파비콘: 이모지 바로 사용 -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27><text y=%2714%27 font-size=%2714%27>🎵</text></svg>"
     />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BABY Keyboard</title>
+    <meta name="description" content="BABY Keyboard — 아이들이 키보드 자판과 친해지고 소리/이모지로 즐겁게 상호작용하도록 돕는 작은 웹앱" />
 
-    <!-- ✅ Google AdSense 스크립트 추가 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4444316763086306"
-      crossorigin="anonymous"></script>
+    <!-- ✅ Google AdSense (본인 client 유지) -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4444316763086306"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // ✅ 기본값을 '비개인화 광고'로 요청 (어린이 친화적·동의 전 기본 안전값)
+      //    필요 시, CMP 동의 후 0으로 토글 가능:
+      //    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 0;
+      (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+
+      // ⚠️ 참고:
+      // - '아동지향(TFCD)'은 AdSense에서는 보통 '사이트/계정 설정'에서 선언하는 편이 정확합니다.
+      //   (광고 코드에 TFCD 파라미터를 억지로 넣기보다, AdSense 콘솔에서 사이트를 아동지향으로 표시)
+      // - 개별 광고 슬롯을 쓰는 경우, 슬롯 컴포넌트 내부에서 adsbygoogle.push({})를 호출해야 렌더됩니다.
+      // - EEA/UK/CH 대상에 개인화 광고를 쓰려면 Google 인증 CMP + Consent Mode v2 연동이 필요합니다.
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
