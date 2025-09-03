@@ -2,9 +2,17 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BABY Keyboard</title>
+    <meta name="description" content="BABY Keyboard — 아이들이 키보드 자판과 친해지고 소리/이모지로 즐겁게 상호작용하도록 돕는 작은 웹앱" />
+    <link rel="canonical" href="https://baby-keyboard.xyz/" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- ✅ AdSense 소유권/계정 메타 -->
     <meta name="google-adsense-account" content="ca-pub-4444316763086306" />
+
+    <!-- (선택) Search Console 소유권 확인용 -->
+    <!-- <meta name="google-site-verification" content="여기에_발급받은_토큰" /> -->
 
     <!-- 파비콘: 이모지 바로 사용 -->
     <link
@@ -12,11 +20,29 @@
       href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27><text y=%2714%27 font-size=%2714%27>🎵</text></svg>"
     />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BABY Keyboard</title>
-    <meta name="description" content="BABY Keyboard — 아이들이 키보드 자판과 친해지고 소리/이모지로 즐겁게 상호작용하도록 돕는 작은 웹앱" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="BABY Keyboard" />
+    <meta property="og:description" content="아이들이 키보드 자판과 친해지고 소리/이모지로 즐겁게 상호작용하도록 돕는 작은 웹앱" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://baby-keyboard.xyz/" />
+    <meta property="og:image" content="https://baby-keyboard.xyz/og-image.png" />
+    <meta property="og:locale" content="ko_KR" />
 
-    <!-- ✅ Google AdSense (본인 client 유지) -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BABY Keyboard" />
+    <meta name="twitter:description" content="아이들이 키보드 자판과 친해지고 소리/이모지로 즐겁게 상호작용하도록 돕는 작은 웹앱" />
+    <meta name="twitter:image" content="https://baby-keyboard.xyz/og-image.png" />
+
+    <!-- 성능: 광고/리소스 프리커넥트 -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin />
+    <link rel="preconnect" href="https://tpc.googlesyndication.com" crossorigin />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+    <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="https://tpc.googlesyndication.com" />
+
+    <!-- ✅ Google AdSense -->
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4444316763086306"
@@ -24,16 +50,41 @@
     ></script>
 
     <script>
-      // ✅ 기본값을 '비개인화 광고'로 요청 (어린이 친화적·동의 전 기본 안전값)
-      //    필요 시, CMP 동의 후 0으로 토글 가능:
-      //    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 0;
+      // ✅ 기본값: 비개인화 광고(NPA) 요청 (아동 친화/동의 전 안전값)
       (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
 
-      // ⚠️ 참고:
-      // - '아동지향(TFCD)'은 AdSense에서는 보통 '사이트/계정 설정'에서 선언하는 편이 정확합니다.
-      //   (광고 코드에 TFCD 파라미터를 억지로 넣기보다, AdSense 콘솔에서 사이트를 아동지향으로 표시)
-      // - 개별 광고 슬롯을 쓰는 경우, 슬롯 컴포넌트 내부에서 adsbygoogle.push({})를 호출해야 렌더됩니다.
-      // - EEA/UK/CH 대상에 개인화 광고를 쓰려면 Google 인증 CMP + Consent Mode v2 연동이 필요합니다.
+      // (선택) EEA/UK/CH에서 CMP를 쓰는 경우, 동의 전에는 보류:
+      // (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+      // 동의 후:
+      // (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 0; // 개인화 허용 시
+      // (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0;
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BABY Keyboard",
+        "url": "https://baby-keyboard.xyz/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://baby-keyboard.xyz/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BABY Keyboard",
+        "url": "https://baby-keyboard.xyz/",
+        "logo": "https://baby-keyboard.xyz/og-image.png",
+        "sameAs": ["https://github.com/integer7813/baby-Keyboard"]
+      }
     </script>
   </head>
 
