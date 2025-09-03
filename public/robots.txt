@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://integer7813.github.io/baby-Keyboard/sitemap.xml
