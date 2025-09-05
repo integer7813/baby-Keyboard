@@ -18,7 +18,7 @@ export default function Landing() {
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
           <Button
             component={RouterLink}
-            to="/play"
+            to="/Play"
             variant="contained"
             size="large"
           >
