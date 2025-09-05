@@ -17,7 +17,7 @@ export default function EmojiSplash({ items }) {
       {items.map(s => (
         <Box key={s.id}
           sx={{ fontSize: { xs: 96, sm: 128, md: 280 }, lineHeight: 1,
-                animation: `${pop} 1000ms ease-out both`,
+                animation: `${pop} 1500ms ease-out both`,
                 filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.25))' }}>
           {s.emoji}
         </Box>
